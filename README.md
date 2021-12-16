@@ -13,7 +13,7 @@
 
 
 
-!['task1'](/Users/varungandhi/Downloads/readme/hello.png "task1 terminal")
+![task1](hello.png)
 
 * In the above picture we can see that using the optional parameter -s or --seq prints out the length of the DNA
 * Using optional parameter -f or --file along with the file name will print out the length of the DNA as weel
