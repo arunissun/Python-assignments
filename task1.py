@@ -38,7 +38,6 @@ class Nucleobase:
             self.complimenter = nucleobase[1]
             self.code = "G"
 
-    
     def compliment(self):
         if self.name.lower() not in nucleobase:
             raise ValueError("not a valid input")
@@ -74,10 +73,11 @@ class Nucleobase:
     def __add__(self, other):
         dna = self.code + other.code
         return DNA(dna)
-    def __mul__(self,other):
+
+    def __mul__(self, other):
         if self.name.lower() == other.complimenter:
             return True
-        else :
+        else:
             return False
 
 
@@ -105,7 +105,7 @@ class DNA(list):
         for i in range(len(a)):
             y += dictt[a.pop(0)]
 
-        return y
+        return "{:.2f}".format(round(y, 2))
 
     def compliment(self):
 
@@ -128,75 +128,93 @@ class DNA(list):
     def __str__(self):
 
         return self.seq
+
     def __add__(self, other):
         dna_extend = self.seq + other.seq
         return DNA("".join(dna_extend))
-    def __mul__(self,other):
+
+    def __mul__(self, other):
         result = []
         if other.seq == self.compliment():
             return True
-        else :
+        else:
             return False
+
+
 def main():
-    #A = Nucleobase("A")
-    #B = Nucleobase("C")
-    #C = Nucleobase("T")
-    #D = Nucleobase("G")
-    #E = Nucleobase("aDeNine")
-    #F = Nucleobase("GuaNine")
-    #G = Nucleobase("cytoSine")
-    #H = Nucleobase("Tryosine")
-    #print(A, B, C, D, E, F, G, H, sep=" \n")
-    #print(
+    # A = Nucleobase("A")
+    # B = Nucleobase("C")
+    # C = Nucleobase("T")
+    # D = Nucleobase("G")
+    # E = Nucleobase("aDeNine")
+    # F = Nucleobase("GuaNine")
+    # G = Nucleobase("cytoSine")
+    # H = Nucleobase("Tryosine")
+    # print(A, B, C, D, E, F, G, H, sep=" \n")
+    # print(
     #    A.molecular_weight,
     #    B.molecular_weight,
     #    C.molecular_weight,
     #    D.molecular_weight,
     #    sep="\n",
-    #)
-    #Y = A.compliment()
-    #print(Y.name, Y.molecular_weight, sep = '\n')
-    
-    #print(A > B, B > C, D > C, sep="\n")
-    #X = DNA("atcga")
-    #Z = DNA("tagct")
-    #print(X)
-    #print(X.molecular_weight())
-    #print(X.compliment())
-    #for i in X:
+    # )
+    # Y = A.compliment()
+    # print(Y.name, Y.molecular_weight, sep="\n")
+
+    # print(A > B, B > C, D > C, sep="\n")
+    # X = DNA("atcga")
+    # Z = DNA("tagct")
+    # print(X)
+    # print(X.molecular_weight())
+    # print(X.compliment())
+    # for i in X:
     #    print(i)
     #    print(type(i))
 
-    #print(type(A + B))
-    #print(X+Z)
-    #print(type(X+Z))
-    #print(X*Z)
-    #print(A*C)
-    #print(len(X+Z))
-    parser = argparse.ArgumentParser(description = "task 1")
-    parser.add_argument('-s','--seq',help = 'dna sequence', type = str)
-    parser.add_argument('-f', '--file', help = 'dna file', type = str)
-    parser.add_argument('-v','--verbose', help = 'dna sequence',action = 'store_true')
-    
+    # print(type(A + B))
+    # print(X + Z)
+    # print(type(X + Z))
+    # print(X * Z)
+    # print(A * C)
+    # print(len(X + Z))
+
+    parser = argparse.ArgumentParser(description="task 1")
+    parser.add_argument("-s", "--seq", help="dna sequence", type=str)
+    parser.add_argument("-f", "--file", help="dna file", type=str)
+    parser.add_argument("-v", "--verbose", help="dna sequence", action="store_true")
+    #
     args = parser.parse_args()
 
     if args.seq and not args.verbose:
         dna = DNA(args.seq)
-        print('length of dna is ', len(dna))
+        print("length of dna is ", len(dna))
 
     if args.file and not args.verbose:
         file = open(args.file).read()
         dna = DNA(file)
-        print('length of dna is ' , len(dna))
+        print("length of dna is ", len(dna))
 
     if args.seq and args.verbose:
         dna = DNA(args.seq)
-        print('length of dna is', len(dna), 'molecular weight', dna.molecular_weight(), sep = '\n')
+        print(
+            "length of dna is",
+            len(dna),
+            "molecular weight",
+            dna.molecular_weight(),
+            sep="\n",
+        )
 
     if args.file and args.verbose:
         file = open(args.file).read()
         dna = DNA(file)
-        print('length of dna is', len(dna), 'molecular weight', dna.molecular_weight(), sep = '\n')
+        print(
+            "length of dna is",
+            len(dna),
+            "molecular weight",
+            dna.molecular_weight(),
+            sep="\n",
+        )
+
 
 if __name__ == "__main__":
     main()
