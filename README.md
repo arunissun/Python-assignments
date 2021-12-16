@@ -21,7 +21,7 @@
 
 
 ### Task2 figure:
-![task2](task2_figure.png)
+![task2](figure_task2.png)
 
 
 
