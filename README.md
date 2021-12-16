@@ -20,4 +20,8 @@
 * Using -v or --verbose as the optional parameter along with -s or --seq and -f or --file will print out the length of the DNA as well as its molecular weight 
 
 
+### Task2 figure:
+![task2](task2_figure.png)
+
+
 
