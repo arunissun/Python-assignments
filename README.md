@@ -9,7 +9,7 @@
 * -v or --verbose can be used with any of the two options above. Using the above parameters with -v or --verbose will give both the length of the DNA and its molecular weight
 
 
-### Images (terminal) of how to use the parameters along with the task1.py file
+### Images (terminal), How to use the parameters along with the task1.py file
 
 
 
