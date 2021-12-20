@@ -1,10 +1,7 @@
 from functools import total_ordering
 import argparse
 
-mw_a = 135.13
-mw_c = 111.1
-mw_t = 126.11
-mw_g = 151.13
+
 nucleobase = ["adenine", "cytosine", "tryosine", "guanine", "a", "c", "t", "g"]
 dictt = {"A": 135.13, "T": 126.11, "C": 111.1, "G": 151.13}
 # @total_ordering
@@ -16,25 +13,25 @@ class Nucleobase:
 
         elif name.lower() == nucleobase[4] or name.lower() == nucleobase[0]:
             self.name = "Adenine"
-            self.molecular_weight = mw_a
+            self.molecular_weight = dictt["A"]
             self.complimenter = nucleobase[2]
             self.code = "A"
 
         elif name.lower() == nucleobase[5] or name.lower() == nucleobase[1]:
             self.name = "Cytosine"
-            self.molecular_weight = mw_c
+            self.molecular_weight = dictt["C"]
             self.complimenter = nucleobase[3]
             self.code = "C"
 
         elif name.lower() == nucleobase[6] or name.lower() == nucleobase[2]:
             self.name = "Tryosine"
-            self.molecular_weight = mw_t
+            self.molecular_weight = dictt["T"]
             self.complimenter = nucleobase[0]
             self.code = "T"
 
         elif name.lower() == nucleobase[7] or name.lower() == nucleobase[3]:
             self.name = "Guanine"
-            self.molecular_weight = mw_g
+            self.molecular_weight = dictt["G"]
             self.complimenter = nucleobase[1]
             self.code = "G"
 
