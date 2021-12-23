@@ -120,7 +120,7 @@ class DNA(list):
                 b[i] = "A"
 
         dna = "".join(b)
-        return dna
+        return DNA(dna)
 
     def __str__(self):
 
@@ -163,7 +163,8 @@ def main():
     # Z = DNA("tagct")
     # print(X)
     # print(X.molecular_weight())
-    # print(X.compliment())
+    # print(type(X.compliment()))
+    # print(X[0])
     # for i in X:
     #    print(i)
     #    print(type(i))
