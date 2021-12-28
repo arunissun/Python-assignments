@@ -1,7 +1,6 @@
 import pandas as pd
 import sqlite3
 from tabulate import tabulate
-import IPython.display as d
 
 conn = sqlite3.connect(
     "/Users/varungandhi/Downloads/codes_python_assignment/assignment2_2122/chinook.db"
@@ -28,6 +27,7 @@ ORDER BY t.Composer
 )
 
 data["Composer"] = data["Composer"].fillna("None")
-# data.to_excel('/Users/varungandhi/Downloads/data.xlsx')
-md = tabulate(data, headers="keys", tablefmt="tsv")
+data.to_excel("/Users/varungandhi/Downloads/data.xlsx")
+md = tabulate(data, tablefmt="psql", headers="keys",)
+
 print(md)
