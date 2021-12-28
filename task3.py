@@ -1,7 +1,8 @@
 import pandas as pd
 import sqlite3
 
-conn = sqlite3.connect("/Users/varungandhi/Downloads/assignment2_2122/chinook.db")
+conn = sqlite3.connect("/Users/varungandhi/Downloads/codes_python_assignment/assignment2_2122/chinook.db")
+
 curs = conn.cursor()
 curs.execute("SELECT name FROM sqlite_master WHERE type='table';")
 
@@ -27,3 +28,5 @@ with pd.option_context(
     "display.max_rows", None, "display.max_columns", None
 ):  # more options can be specified also
     print(data)
+
+#data.to_excel('/Users/varungandhi/Downloads/data.xlsx')
