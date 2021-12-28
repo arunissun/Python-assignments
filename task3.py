@@ -1,7 +1,11 @@
 import pandas as pd
 import sqlite3
+from tabulate import tabulate
+import IPython.display as d
 
-conn = sqlite3.connect("/Users/varungandhi/Downloads/codes_python_assignment/assignment2_2122/chinook.db")
+conn = sqlite3.connect(
+    "/Users/varungandhi/Downloads/codes_python_assignment/assignment2_2122/chinook.db"
+)
 
 curs = conn.cursor()
 curs.execute("SELECT name FROM sqlite_master WHERE type='table';")
@@ -24,9 +28,6 @@ ORDER BY t.Composer
 )
 
 
-with pd.option_context(
-    "display.max_rows", None, "display.max_columns", None
-):  # more options can be specified also
-    print(data)
-
-#data.to_excel('/Users/varungandhi/Downloads/data.xlsx')
+# data.to_excel('/Users/varungandhi/Downloads/data.xlsx')
+md = tabulate(data, headers="keys", tablefmt="tsv")
+print(md)
