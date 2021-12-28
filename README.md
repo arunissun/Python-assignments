@@ -13,7 +13,7 @@
 
 
 
-![task1](hello.png)
+![task1](images/hello.png)
 
 * In the above picture we can see that using the optional parameter -s or --seq prints out the length of the DNA
 * Using optional parameter -f or --file along with the file name will print out the length of the DNA as weel
@@ -21,18 +21,18 @@
 
 
 ### Task2 figure:
-![task2](figure_task2.png)
+![task2](images/figure_task2.png)
 
 ### Task3 screenshot of dataframe
 
 Here we can see the screen shot of the data being printed on running task3.py
 only the first 23 rows can be seen out of the 45 rows 
 
-![task3](image2.png)
+![task3](images/image2.png)
 
 ### Task4 screenshot of the final list containing data of track name, composer, album name and artist name
 
-![task4](image3.png)
+![task4](images/image3.png)
 
 
 
