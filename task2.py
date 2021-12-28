@@ -6,7 +6,7 @@ import re
 from matplotlib.dates import DayLocator, DateFormatter
 
 path = "/Users/varungandhi/Downloads/codes_python_assignment/assignment2_2122/BabyRecords.csv"
-locale.setlocale(locale.LC_ALL, "hu_HU")
+locale.setlocale(locale.LC_ALL, "hu_HU.UTF-8")
 
 
 def main():
