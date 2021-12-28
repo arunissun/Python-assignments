@@ -26,7 +26,7 @@
 ### Task3 screenshot of data 
 
 Here we can see the screen shot of the data being printed on running task3.py
-only the first 24 rows can be seen out of the 45 rows 
+only the first 23 rows can be seen out of the 45 rows 
 
 ![task3](image2.png)
 
