@@ -23,5 +23,12 @@
 ### Task2 figure:
 ![task2](figure_task2.png)
 
+### Task3 screenshot of data 
+
+Here we can see the screen shot of the data being printed on running task3.py
+only the first 24 rows can be seen out of the 45 rows 
+
+![task3](image2.png)
+
 
 
