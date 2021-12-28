@@ -27,7 +27,7 @@ ORDER BY t.Composer
     conn,
 )
 
-
+data["Composer"] = data["Composer"].fillna("None")
 # data.to_excel('/Users/varungandhi/Downloads/data.xlsx')
 md = tabulate(data, headers="keys", tablefmt="tsv")
 print(md)
